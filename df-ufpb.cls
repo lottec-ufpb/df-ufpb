@@ -25,7 +25,6 @@
 \RequirePackage{ifthen}%
 
 \newboolean{abnt}     % true for following ABNT to the letter
-\newboolean{utf8}     % true to use utf8 encoding
 
 %% =========================== Options ===============================
 \DeclareOption{tese}{%
@@ -54,10 +53,6 @@
 
 \DeclareOption{abnt}{%
   \setboolean{abnt}{true}%
-}%
-
-\DeclareOption{utf8}{%
-  \setboolean{utf8}{true}%
 }%
 
 \DeclareOption{greek}{%
@@ -152,12 +147,8 @@
 
 %% Loading necessary class and packages
 \LoadClass[a4paper,12pt]{report}%
-
-\ifthenelse{\boolean{utf8}}%
-           {\RequirePackage[utf8]{inputenc}}
-           {\RequirePackage[latin1]{inputenc}}
-
-%\RequirePackage[latin,greek,french,german,english,brazil]{babel}%
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[latin1]{inputenc}
 \RequirePackage[T1]{fontenc}%
 %\RequirePackage{pslatex}%
 \RequirePackage{indentfirst}%

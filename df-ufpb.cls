@@ -177,7 +177,7 @@
 
 \RequirePackage{ifpdf}   % pdfTeX?
 \ifpdf%
- \RequirePackage[colorlinks,pdftex]{hyperref}%
+ \RequirePackage[hidelinks,pdftex]{hyperref}%
  \pdfadjustspacing=1            % LaTeX spacing
  \AtBeginDocument{%
    \hypersetup{%
@@ -186,10 +186,6 @@
      pdfstartview=FitH,%
      hypertexnames=false,%
      naturalnames=true,%
-     citecolor=black,%
-     filecolor=black,%
-     urlcolor=black,%
-     linkcolor=black,%
      pdftitle={\ufpb@titulo},%
      pdfauthor={\ufpb@autor},%
      pdfsubject={\ufpb@linhadepesquisa}%

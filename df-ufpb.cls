@@ -150,14 +150,13 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[latin1]{inputenc}
 \RequirePackage[T1]{fontenc}%
-%\RequirePackage{pslatex}%
 \RequirePackage{indentfirst}%
 \RequirePackage{setspace}%
 \RequirePackage{pageslts}%
 \RequirePackage{babel}%
 \RequirePackage{graphicx}
-%% ABNT quotation environment
 
+%% ABNT quotation environment
 \newenvironment{citacao}%
   {\begin{spacing}{1.}%
    \small

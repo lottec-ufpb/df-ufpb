@@ -148,7 +148,6 @@
 %% Loading necessary class and packages
 \LoadClass[a4paper,12pt]{report}%
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[latin1]{inputenc}
 \RequirePackage[T1]{fontenc}%
 \RequirePackage{indentfirst}%
 \RequirePackage{setspace}%

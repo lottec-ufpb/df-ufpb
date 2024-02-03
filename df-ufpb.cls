@@ -152,6 +152,7 @@
 \RequirePackage{indentfirst}%
 \RequirePackage{setspace}%
 \RequirePackage{pageslts}%
+\pagenumbering{arabic}%
 \RequirePackage{babel}%
 \RequirePackage{graphicx}
 

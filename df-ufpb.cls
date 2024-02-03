@@ -234,7 +234,7 @@
 \def\siglaunico#1{\def\ufpb@unico{#1}}%
 \siglaunico{UFPB}                       % default
 \def\linhadepesquisa#1{\def\ufpb@linhadepesquisa{#1}}%
-\linhadepesquisa{Filosofia Pol\'{i}tica}              % default
+\linhadepesquisa{Filosofia}              % default
 \def\inclui#1{\long\def\ufpb@inclui{#1}}%
 \inclui{\IfFileExists{\jobname.bbl}{Bibliografia.}\linebreak
   \IfFileExists{\jobname.ind}{Inclui \'{i}ndice remissivo.}} % default

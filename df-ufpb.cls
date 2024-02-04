@@ -43,7 +43,7 @@
  \def\ufpb@curso{Mestrado}%
 }%
 
-\DeclareOption{monografia}{%
+\DeclareOption{tcc}{%
  \def\ufpb@titulacao{Licenciado(a)}%
  \def\ufpb@documento{\monographname}%
  \def\ufpb@programa{à Coordena\c{c}\~{a}o do Curso de %

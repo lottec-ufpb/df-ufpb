@@ -373,8 +373,10 @@
        \ufpb@area{}.\par%
        \vspace{2cm}
        \begin{tabular}{rp{6cm}}
-         \textsf{Linha de Pesquisa:} & \ufpb@linhadepesquisa{}\\[4pt]
-         \textsf{Orientador:}     & Prof. Dr. \ufpb@orientador{}
+         \ifthenelse{\isundefined{\ufpb@linhadepesquisa}}{}{%
+           \textsf{Linha de Pesquisa:} & \ufpb@linhadepesquisa{}\\[4pt]
+           }%
+         \textsf{Orientador(a):}     & Prof(a). Dr(a). \ufpb@orientador{}
        \end{tabular}
      \end{minipage}
    \end{flushright}

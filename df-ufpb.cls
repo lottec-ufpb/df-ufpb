@@ -44,7 +44,7 @@
 }%
 
 \DeclareOption{tcc}{%
- \def\ufpb@titulacao{Licenciado(a)}%
+ \def\ufpb@titulacao{Bacharel}%
  \def\ufpb@documento{\monographname}%
  \def\ufpb@programa{à Coordena\c{c}\~{a}o do Curso de %
    Filosofia}%

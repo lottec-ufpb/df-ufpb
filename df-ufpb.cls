@@ -212,8 +212,8 @@
 \def\ano#1{\def\ufpb@ano{#1}}%
 \def\cidade#1{\def\ufpb@cidade{#1}}%
 \cidade{Jo\~ao Pessoa}           % default 
-\def\departamento#1{\def\ufpb@departamento{#1}}%
-\departamento{}                                 % default
+\def\centro#1{\def\ufpb@centro{#1}}%
+\centro{Centro de Ci\^{e}ncias Humanas, Letras e Artes}                                 % default
 \def\unidade#1{\def\ufpb@unidade{#1}}%
 \unidade{Departamento de Filosofia}      % default
 \def\area#1{\def\ufpb@area{#1}}
@@ -257,8 +257,8 @@
        \begin{center}
          \includegraphics[height=0.1\paperheight]{brasao-ufpb}\par
          \Large\textsc{\ufpb@universidade}\linebreak%
-         \textsc{\ufpb@unidade}\linebreak%
-         \textsc{\ufpb@departamento}%
+         \textsc{\ufpb@centro}\linebreak%
+         \textsc{\ufpb@unidade}%
        \end{center}
      \end{onehalfspace}
      \begin{doublespace}
@@ -291,8 +291,8 @@
    \begin{onehalfspace}
      \begin{center}
        \Large\textsc{\ufpb@universidade}\linebreak%
-       \textsc{\ufpb@unidade}\linebreak%
-       \textsc{\ufpb@departamento}%
+       \textsc{\ufpb@centro}\linebreak%
+       \textsc{\ufpb@unidade}%
      \end{center}
    \end{onehalfspace}
    \vspace{\stretch{0.3}}%
@@ -305,7 +305,7 @@
    \end{onehalfspace}
    \vspace{10pt}%
    Na qualidade de titular dos direitos de autor, \textbf{AUTORIZO}
-   a \ufpb@unidade{} da \ufpb@universidade{} -- \ufpb@uni{} a
+   a \ufpb@universidade{} -- \ufpb@uni{} a
    reproduzir, inclusive em outro formato ou m\'{i}dia e atrav\'{e}s
    de armazenamento permanente ou tempor\'{a}rio, bem como a
    publicar na rede mundial de computadores (\textit{Internet}) e na

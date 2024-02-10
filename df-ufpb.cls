@@ -463,7 +463,7 @@
  \fi
  \newcommand{\membro}[3]{%
    \rule{0.8\textwidth}{0.4pt}\linebreak
-   \textbf{Prof. ##1}\linebreak
+   \textbf{##1}\linebreak
    ##2 -- ##3 \vskip 30pt
  }%
  \begin{otherlanguage}{brazil}

@@ -218,17 +218,11 @@
 \unidade{Departamento de Filosofia}      % default
 \def\area#1{\def\ufpb@area{#1}}
 \area{Filosofia}                                       % default
-\def\unidadeco#1{\def\ufpb@unidadeco{#1}}%
-\unidadeco{Departamento de Filosofia}        % default
 \def\programa#1{\def\ufpb@programa{#1}}%
 \def\universidade#1{\def\ufpb@universidade{#1}}%
 \universidade{Universidade Federal da Para\'{i}ba} % default
-\def\universidadeco#1{\def\ufpb@universidadeco{#1}}%
-\universidadeco{Universidade Federal da Para\'{i}ba}    %default
 \def\siglauni#1{\def\ufpb@uni{#1}}%
 \siglauni{UFPB}                          % default
-\def\siglaunico#1{\def\ufpb@unico{#1}}%
-\siglaunico{UFPB}                       % default
 \def\linhadepesquisa#1{\def\ufpb@linhadepesquisa{#1}}%
 \linhadepesquisa{Filosofia}              % default
 \def\inclui#1{\long\def\ufpb@inclui{#1}}%

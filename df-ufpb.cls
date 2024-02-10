@@ -181,6 +181,8 @@
  \RequirePackage[hidelinks,pdftex]{hyperref}%
  \pdfadjustspacing=1            % LaTeX spacing
  \AtBeginDocument{%
+   %% Define a command to use when there is no gender declination
+   \ifthenelse{\isundefined{\ufpb@autora}}{\let\ufpb@autorx=\ufpb@autor}{\let\ufpb@autorx=\ufpb@autora}%
    \hypersetup{%
      bookmarksopen=false,%
      bookmarksnumbered=true,%
@@ -188,8 +190,8 @@
      hypertexnames=false,%
      naturalnames=true,%
      pdftitle={\ufpb@titulo},%
-     pdfauthor={\ufpb@autor},%
-     pdfsubject={\ufpb@linhadepesquisa}%
+     pdfauthor={\ufpb@autorx},%
+     pdfsubject={\ufpb@chaves}%
    }%
  }%
 \else%
@@ -200,10 +202,13 @@
 \def\titulo#1{\def\ufpb@titulo{#1}}%
 \def\subtitulo#1{\def\ufpb@subtitulo{#1}}%
 \def\autor#1{\def\ufpb@autor{#1}}%
+\def\autora#1{\def\ufpb@autora{#1}}%
 \def\autorR#1{\def\ufpb@autorR{#1}}%
 \def\orientador#1{\def\ufpb@orientador{#1}}%
+\def\orientadora#1{\def\ufpb@orientadora{#1}}%
 \def\orientadorR#1{\def\ufpb@orientadorR{#1}}%
 \def\coorientador#1{\def\ufpb@coorientador{#1}}%
+\def\coorientadora#1{\def\ufpb@coorientadora{#1}}%
 \def\coorientadorR#1{\def\ufpb@coorientadorR{#1}}%
 \def\chaves#1{\def\ufpb@chaves{#1}}%
 \def\keys#1{\def\ufpb@keys{#1}}%
@@ -264,7 +269,7 @@
        \end{center}
      \end{doublespace}
      \begin{center}
-       \Large\ufpb@autor%
+       \Large\ufpb@autorx%
      \end{center}
      \vfill
      \begin{center}
@@ -319,21 +324,34 @@
    \ifthenelse{\isundefined{\ufpb@subtitulo}}{}{%
      \ -- \ufpb@subtitulo}\par%
    \vspace{15pt}%
-   \noindent\textbf{Autor(a):} \ufpb@autor\par%
+   \noindent%
+   \ifthenelse{\isundefined{\ufpb@autora}}{%
+     \textbf{Autor:} \ufpb@autor\par}{%
+     \textbf{Autora:} \ufpb@autora\par}%
    \vspace{20pt}%
    \noindent\ufpb@cidade{}, \ufpb@dia{} de \ufpb@mes{} de %
    \ufpb@ano{}.%
    \vfill%
    \begin{flushright}
      \rule{0.7\textwidth}{0.4pt}\linebreak%
-     \small\ufpb@autor{} -- Autor(a)\par%
+     \small%
+     \ifthenelse{\isundefined{\ufpb@autora}}{%
+       \ufpb@autor{} -- Autor\par}{%
+       \ufpb@autora{} -- Autora\par}%
      \vspace{20pt}
      \rule{0.7\textwidth}{0.4pt}\linebreak%
-     \small\ufpb@orientador{} -- Orientador(a)\par%
+     \small%
+     \ifthenelse{\isundefined{\ufpb@orientadora}}{%
+         \ufpb@orientador{} -- Orientador\par}{%
+         \ufpb@orientadora{} -- Orientadora\par}%
      \ifthenelse{\isundefined{\ufpb@coorientador}}{}{%
        \vspace{20pt}%
        \rule{0.7\textwidth}{0.4pt}\linebreak%
-       \small\ufpb@coorientador{} -- Co-Orientador(a)}
+       \small\ufpb@coorientador{} -- Co-Orientador}
+     \ifthenelse{\isundefined{\ufpb@coorientadora}}{}{%
+       \vspace{20pt}%
+       \rule{0.7\textwidth}{0.4pt}\linebreak%
+       \small\ufpb@coorientadora{} -- Co-Orientadora}
    \end{flushright}%
  \end{otherlanguage}
  \thispagestyle{empty}%
@@ -349,7 +367,7 @@
  \begin{otherlanguage}{brazil}
    \begin{onehalfspace}
      \begin{center}
-       \Large\textsc{\ufpb@autor}
+       \Large\textsc{\ufpb@autorx}
      \end{center}
      \vspace{\stretch{0.7}}
      \begin{center}
@@ -369,8 +387,18 @@
        \begin{tabular}{rp{6cm}}
          \ifthenelse{\isundefined{\ufpb@linhadepesquisa}}{}{%
            \textsf{Linha de Pesquisa:} & \ufpb@linhadepesquisa{}\\[4pt]
-           }%
-         \textsf{Orientador(a):}     & Prof(a). Dr(a). \ufpb@orientador{}
+         }%
+         \ifthenelse{\isundefined{\ufpb@orientadora}}{%
+           \textsf{Orientador:}     & Prof. Dr. \ufpb@orientador{}\\
+         }{%
+           \textsf{Orientadora:}     & Profa. Dra. \ufpb@orientadora{}\\
+         }%
+         \ifthenelse{\NOT\isundefined{\ufpb@coorientadora}}{%
+           \textsf{Coorientadora:}     & Profa. Dra. \ufpb@coorientadora{}
+         }{}%
+         \ifthenelse{\NOT\isundefined{\ufpb@coorientador}}{%
+           \textsf{Coorientador:}     & Prof. Dr. \ufpb@coorientador{}
+         }{}%
        \end{tabular}
      \end{minipage}
    \end{flushright}
@@ -405,18 +433,21 @@
        \ufpb@codigoBC & \ufpb@titulo
        \ifthenelse{\isundefined{\ufpb@subtitulo}}{}{%
          : \ufpb@subtitulo} [manuscrito] / %
-       \ufpb@autor{}. -- \ufpb@ano{}. & \\
+       \ufpb@autorx{}. -- \ufpb@ano{}. & \\
        & \lastpageref{LastPages}f. & \\[0.5cm]
-       & Orientador(a): Prof. \ufpb@orientador
+       & \ifthenelse{\isundefined{\ufpb@orientadora}}{%
+         Orientador: Prof. \ufpb@orientador{}}{Orientadora: Profa. \ufpb@orientadora{}}
        \ifthenelse{\isundefined{\ufpb@coorientador}}{}{%
-         ; Co-Orientador(a): Prof. \ufpb@coorientador{}} & \\
+         ; Co-Orientador: Prof. \ufpb@coorientador{}}
+       \ifthenelse{\isundefined{\ufpb@coorientadora}}{}{%
+         ; Co-Orientadora: Profa. \ufpb@coorientadora{}} & \\
        & \ufpb@documento{} (\ufpb@curso{}) -- \ufpb@universidade{}, %
        \ufpb@unidade{}, \ufpb@ano{}. & \\[0.5cm]
        & \ufpb@inclui{} & \\[1cm]
-
+       
        & 1.~\ufpb@classi{} 2.~\ufpb@classii{} 3.~\ufpb@classiii{} %
        I.~T\'{i}tulo. & \\
-       & & CDU: \ufpb@CDU\\
+       & & CDU: \ufpb@CDU \\
        \hline
      \end{tabular}
    \end{minipage}
@@ -438,7 +469,7 @@
  \begin{otherlanguage}{brazil}
    \begin{center}
      \begin{onehalfspace}
-       \Large\textsc{\ufpb@autor}\linebreak
+       \Large\textsc{\ufpb@autorx}\linebreak
        \vskip 20pt
        \Large\textbf{\ufpb@titulo}\linebreak
        \ifthenelse{\isundefined{\ufpb@subtitulo}}{}{%
@@ -455,7 +486,9 @@
    \vfill
    \begin{center}
      \rule{0.8\textwidth}{0.4pt}\linebreak
-     \textbf{Prof. Dr. \ufpb@orientador}\linebreak
+     \ifthenelse{\isundefined{\ufpb@orientadora}}{%
+       \textbf{Prof. Dr. \ufpb@orientador}\linebreak}{%
+       \textbf{Profa. Dra. \ufpb@orientadora}\linebreak}%
      Presidente da Banca \vskip 30pt
 }{%
    \end{center}%

@@ -204,6 +204,8 @@
      pdfstartview=FitH,%
      hypertexnames=false,%
      naturalnames=true,%
+     backref=page,%
+     hyperindex=true,%
      pdftitle={\ufpb@titulo},%
      pdfauthor={\ufpb@autorx},%
      pdfsubject={\ufpb@chaves}%

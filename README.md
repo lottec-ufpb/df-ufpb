@@ -100,6 +100,10 @@ Informar a área de conhecimento do trabalho. Caso não informado, será assumid
 
 Informar a linha de pesquisa na qual se insere o trabalho. Normalmente, deve ser informado no caso de trabalhos de pós-graduação.
 
+### `\titulacao{}` (opcional)
+
+Informar a titulação associada ao trabalho. Caso não informado, será assumido "Bacharel", "Mestre" ou "Doutor", conforme o tipo do trabalho. Estudantes de licenciatura podem informar "Licenciado" ou "Licenciada" aqui.
+
 ### `\codigoBC{}` (necessário caso seja usado o comando `\ficha`)
 
 Informar o código atribuído ao trabalho na ocasião da catalogação na fonte (CIP), feita pela biblioteca.

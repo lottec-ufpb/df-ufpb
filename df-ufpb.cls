@@ -247,6 +247,7 @@
 \siglauni{UFPB}                          % default
 \def\linhadepesquisa#1{\def\ufpb@linhadepesquisa{#1}}%
 \linhadepesquisa{Filosofia}              % default
+\def\titulacao#1{\def\ufpb@titulacao{#1}}%
 \def\inclui#1{\long\def\ufpb@inclui{#1}}%
 \inclui{\IfFileExists{\jobname.bbl}{Bibliografia.}\linebreak
   \IfFileExists{\jobname.ind}{Inclui \'{i}ndice remissivo.}} % default

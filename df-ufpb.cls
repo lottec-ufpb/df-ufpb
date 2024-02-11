@@ -629,6 +629,24 @@
   \clearpage%
 }
 
+\newcommand{\listadefiguras}{%
+  \ifpdf%
+  \pdfbookmark[1]{\listfigurename}{figuras}
+  \fi
+  \listoffigures%
+  \thispagestyle{empty}%
+  \clearpage%
+}%
+
+\newcommand{\listadetabelas}{%
+  \ifpdf%
+  \pdfbookmark[1]{\listtablename}{tabelas}
+  \fi
+  \listoftables%
+  \thispagestyle{empty}%
+  \clearpage%
+}%
+
 \newcommand{\sumario}{%
   \ifpdf%
   \pdfbookmark[1]{\contentsname}{sumario}

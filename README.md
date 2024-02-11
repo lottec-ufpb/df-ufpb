@@ -164,6 +164,14 @@ O argumento opcional entre colchetes é uma tradução do título do trabalho na
 
 Gera uma folha com uma epígrafe. O primeiro argumento é a epígrafe, o segundo é o nome do autor e o terceiro é o nome da obra.
 
+### `\listadefiguras`
+
+Gera uma lista de figuras.
+
+### `\listadetabelas`
+
+Gera uma lista de tableas.
+
 ### `\sumario`
 
 Gera um sumário.

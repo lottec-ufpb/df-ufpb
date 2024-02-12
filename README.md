@@ -1,5 +1,8 @@
 # Uma classe LaTeX para trabalhos acadêmicos
 
+[![Build
+Status](https://github.com/lottec-ufpb/df-ufpb/actions/workflows/main.yml/badge.svg)](https://github.com/lottec-ufpb/df-ufpb/actions/workflows/main.yml)
+
 A classe `df-ufpb.cls` foi escrita para auxiliar estudantes na elaboração de monografias, dissertações ou teses.
 
 O foco da classe é a geração de elementos textuais comuns em trabalhos acadêmicos (capa, folha de rosto e etc.) e algumas amenidades e ajustes na produção do PDF (metadados e marcadores). Para além disto, no entanto, não é imposta qualquer diagramação ou estilo. Estes aspectos visuais são melhor relegados ao gosto da freguesia. 

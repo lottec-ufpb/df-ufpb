@@ -186,10 +186,6 @@ Gera uma lista de tableas.
 
 Gera um sumário.
 
-# Modelo
-
-A escrever.
-
 # Termos de uso
 
-A escrever.
+Esta classe está sob a [The LaTeX Project Public License](https://www.latex-project.org/lppl.txt). A imagem com o brasão da UFPB é distribuída para sua conveniência. Seu uso é [regimentado pelo UFPB](https://www.ufpb.br/ufpb/contents/documentos/outros-pdfs/orientacoes-sobre-o-uso-do-brasao-oficial-da-ufpb.pdf).

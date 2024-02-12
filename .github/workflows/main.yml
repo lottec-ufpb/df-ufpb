@@ -39,5 +39,5 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: modelo.pdf
-          name: modelo-${{ github.ref_name }}
+          name: DF-UFPB-${{ github.ref_name }}
           body: "Classe + Modelo Ilustrativo com PDF"

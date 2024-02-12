@@ -4,6 +4,8 @@ A classe `df-ufpb.cls` foi escrita para auxiliar estudantes na elaboração de m
 
 O foco da classe é a geração de elementos textuais comuns em trabalhos acadêmicos (capa, folha de rosto e etc.) e algumas amenidades e ajustes na produção do PDF (metadados e marcadores). Para além disto, no entanto, não é imposta qualquer diagramação ou estilo. Estes aspectos visuais são melhor relegados ao gosto da freguesia. 
 
+Um [modelo LaTeX](https://github.com/lottec-ufpb/df-ufpb/blob/main/modelo.tex) ilustrativo e o [PDF resultante](https://github.com/lottec-ufpb/df-ufpb/releases/latest/download/modelo.pdf) estão disponíveis.
+
 # Instruções
 
 Coloque a classe `df-ufpb.cls` no mesmo diretório das fontes LaTeX.

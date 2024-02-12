@@ -25,7 +25,6 @@
 \RequirePackage{ifthen}%
 
 \newboolean{abnt}     % true for following ABNT to the letter
-\newboolean{biblatex-abnt} % true for using BibLaTeX
 
 %% =========================== Options ===============================
 \DeclareOption{tese}{%
@@ -53,11 +52,6 @@
 }%
 
 \DeclareOption{abnt}{%
-  \setboolean{abnt}{true}%
-}%
-
-\DeclareOption{biblatex-abnt}{%
-  \setboolean{biblatex-abnt}{true}%
   \setboolean{abnt}{true}%
 }%
 
@@ -160,13 +154,7 @@
 \RequirePackage{pageslts}%
 \pagenumbering{arabic}%
 \RequirePackage{babel}%
-\RequirePackage{graphicx}%
-
-\ifthenelse{\boolean{biblatex-abnt}}%
-           {%
-             \RequirePackage[style=abnt]{biblatex}%
-           }{}%
-  
+\RequirePackage{graphicx}%  
 
 %% ABNT quotation environment
 \newenvironment{citacao}%
@@ -181,15 +169,14 @@
     \item\relax}%
   {\end{list}\end{spacing}}
 
-\ifthenelse{\boolean{abnt}}%
-           {%
-             \RequirePackage[alf]{abntex2cite}%
-             \newcommand{\textcite}[2][]{\citeonline[#1]{#2}}%
-             \newcommand{\autocite}[2][]{\cite[#1]{#2}}%
-             \renewenvironment{quote}%
-                              {\begin{citacao}}%
-                              {\end{citacao}}%
-           }{}%
+\ifthenelse{\boolean{abnt}}{%
+  \RequirePackage[alf]{abntex2cite}%
+  \newcommand{\textcite}[2][]{\citeonline[#1]{#2}}%
+  \newcommand{\autocite}[2][]{\cite[#1]{#2}}%
+  \renewenvironment{quote}%
+                   {\begin{citacao}}%
+                   {\end{citacao}}%
+}{}%
 
 \RequirePackage{ifpdf}   % pdfTeX?
 \ifpdf%
@@ -663,11 +650,7 @@
   \ifpdf%
   \pdfbookmark[0]{\bibname}{bib}
   \fi
-  \ifthenelse{\boolean{biblatex-abnt}}
-             {
-               \addbibresource{#1}%
-               \printbibliography{}%
-             }{\bibliography{#1}}%
+  \bibliography{#1}
 }%
 
 \newcommand{\indice}{%

@@ -26,7 +26,7 @@ Qualquer opção não reconhecida pela `df-ufpb` é repassada à classe comum `r
 
 São detectadas três opções que definem o tipo de trabalho: `tcc`, `dissertacao` e `tese`. Passe os idiomas a serem usados no trabalho, sendo o último idioma aquele no qual o trabalho é majoritariamente escrito. Os demais idiomas podem ser empregados, por exemplo, em citações ou no resumo em língua estrangeira.
 
-A opção `abnt` redefine o ambiente `quote` de modo a formatar citações destacadas com espaçamento conforme a ABNT (NBR 14724). Note que o espaçamento simples para citações é o *único* aspecto desta norma implantado. Ademais, esta opção carrega os pacotes mais populares para também formatar as referências no estilo autor-data previsto na ABNT (NBR 10520). Atualmente, este é o `abntex2cite` do [ABNTeX2](https://www.abntex.net.br). Para quem prefere BibLaTeX, a opção `biblatex-abnt` está disponível para uso do [estilo correspondente](https://www.ctan.org/pkg/biblatex-abnt). Normalmente, essas adaptações são suficientes para convencer a maior parte dos burocratas de que o trabalho "obedece as normas da ABNT". Caso possível, é recomendável não seguir estas normas, mas adotar um estilo com ampla aceitação internacional, como [Chicago](https://www.ctan.org/pkg/biblatex-chicago), por exemplo. 
+A opção `abnt` redefine o ambiente `quote` de modo a formatar citações destacadas com espaçamento conforme a ABNT (NBR 14724). Note que o espaçamento simples para citações é o *único* aspecto desta norma implantado. Ademais, esta opção carrega os pacotes mais populares para também formatar as referências no estilo autor-data previsto na ABNT (NBR 10520). Atualmente, este é o `abntex2cite` do [ABNTeX2](https://www.abntex.net.br). Normalmente, essas adaptações são suficientes para convencer a maior parte dos burocratas de que o trabalho "obedece as normas da ABNT". Caso possível, é recomendável não seguir estas normas, mas adotar um estilo com ampla aceitação internacional, como [Chicago](https://www.ctan.org/pkg/biblatex-chicago), por exemplo. 
 
 ## Metadados
 
@@ -184,7 +184,7 @@ Gera um sumário.
 
 ### `\bibliografia{}`
 
-Gera uma bibliografia. O argumento é o nome do arquivo `.bib` contendo os dados bibliográficos das obras citadas.
+Gera uma bibliografia. O argumento é o nome do arquivo `.bib` contendo os dados bibliográficos das obras citadas. Útil caso a opção `abnt` esteja ativa, quando o pacote `abntex2cite` é então carregado automaticamente. Nos demais casos, o gerenciamento das referências bibliográficas é melhor relegado ao usuário.
 
 ### `\indice`
 

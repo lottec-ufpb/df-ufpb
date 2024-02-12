@@ -172,9 +172,9 @@ O argumento obrigatório entre chaves é o idioma no qual o resumo está escrito
 
 O argumento opcional entre colchetes é uma tradução do título do trabalho na língua estrangeira.
 
-### `\epigrafe{}{}{}`
+### `\epigrafe[]{}{}{}`
 
-Gera uma folha com uma epígrafe. O primeiro argumento é a epígrafe, o segundo é o nome do autor e o terceiro é o nome da obra.
+Gera uma folha com uma epígrafe. O primeiro argumento é a epígrafe, o segundo é o nome do autor e o terceiro é o nome da obra. Para frases em língua estrangeira, colocar o idioma no argumento opcional entre colchetes.
 
 ### `\listadefiguras`
 

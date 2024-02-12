@@ -44,6 +44,10 @@ Informar o subtítulo do trabalho.
 
 Informar o(a) autor(a) do trabalho.
 
+### `\autorR{}` (obrigatório)
+
+Informar o nome do(a) autor(a) no formato "Sobrenome, Nome".
+
 ### `\orientador{}` ou `\orientadora{}` (obrigatório ao menos um)
 
 Informar o(a) orientador(a) do trabalho.

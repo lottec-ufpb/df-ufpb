@@ -121,7 +121,7 @@
       \def\keysname{Palavras-chave}%
       \def\thesisname{Tese}%
       \def\dissertationname{Disserta\c{c}\~ao}%
-      \def\monographname{Trabalho de Conclus\~ao}%
+      \def\monographname{Monografia}%
       \def\acknowledgementsname{Agradecimentos}%
     }%
   }%
@@ -210,10 +210,8 @@
 \def\autorR#1{\def\ufpb@autorR{#1}}%
 \def\orientador#1{\def\ufpb@orientador{#1}}%
 \def\orientadora#1{\def\ufpb@orientadora{#1}}%
-\def\orientadorR#1{\def\ufpb@orientadorR{#1}}%
 \def\coorientador#1{\def\ufpb@coorientador{#1}}%
 \def\coorientadora#1{\def\ufpb@coorientadora{#1}}%
-\def\coorientadorR#1{\def\ufpb@coorientadorR{#1}}%
 \def\chaves#1{\def\ufpb@chaves{#1}}%
 \def\keys#1{\def\ufpb@keys{#1}}%
 \def\dia#1{\def\ufpb@dia{#1}}%
@@ -233,7 +231,6 @@
 \def\siglauni#1{\def\ufpb@uni{#1}}%
 \siglauni{UFPB}                          % default
 \def\linhadepesquisa#1{\def\ufpb@linhadepesquisa{#1}}%
-\linhadepesquisa{Filosofia}              % default
 \def\titulacao#1{\def\ufpb@titulacao{#1}}%
 \def\inclui#1{\long\def\ufpb@inclui{#1}}%
 \inclui{\IfFileExists{\jobname.bbl}{Inclui bibliografia.}} % default
@@ -431,7 +428,8 @@
          Publica\c{c}\~{a}o (CIP)}\par%
        \textbf{BC/UFPB}
      \end{center}
-     \begin{tabular}{|p{1cm} p{9cm} p{2cm}|}
+     \begin{center}
+     \begin{tabular}{|l p{0.6\linewidth} r|}
        \hline
        & \ufpb@autorR & \\
        \ufpb@codigoBC & \ufpb@titulo
@@ -454,6 +452,7 @@
        & & CDU: \ufpb@CDU \\
        \hline
      \end{tabular}
+     \end{center}
    \end{minipage}
  \end{otherlanguage}
  \thispagestyle{empty}
@@ -534,9 +533,8 @@
     \begin{center}
       \textbf{\Huge{\abstractname}}
     \end{center}
-    \par%
-    \vspace{30pt}
-    \begin{minipage}{13.5cm}
+    \par\vspace{30pt}\noindent
+    \begin{minipage}{\textwidth}
       \begin{singlespace}
         \ufpb@autorR{}.
         \textbf{\ufpb@titulo}.
@@ -547,8 +545,7 @@
         \ufpb@universidade.
       \end{singlespace}
     \end{minipage}
-    \par%
-    \vspace{20pt}%
+    \par\vspace{20pt}
 }{%
   % \vspace{\stretch{0.8}}%
   \par%
@@ -570,9 +567,8 @@
  \begin{center}
    \textbf{\Huge{\abstractname}}%
  \end{center}
- \par%
- \vspace{30pt}
-  \begin{minipage}{13.5cm}
+ \par\vspace{30pt}\noindent
+  \begin{minipage}{\textwidth}
     \begin{singlespace}
       \foreignlanguage{brazil}{\ufpb@autorR}.
       \textbf{#1}.
@@ -584,8 +580,7 @@
       \foreignlanguage{brazil}{\ufpb@universidade}.
     \end{singlespace}
   \end{minipage}
-  \par%
-  \vspace{20pt}
+  \par\vspace{20pt}
   }
   {%
   \par%
@@ -599,19 +594,20 @@
 
 %%% Epigrafe
 
-\newcommand{\epigrafe}[3]{%
+\newcommand{\epigrafe}[4][brazilian]{%
   \ifpdf
    \pdfbookmark[1]{Ep\'{i}grafe}{pretexto.epigrafe}
   \fi
   \thispagestyle{empty}%
-  \vspace*{\stretch{1}}\par%
+  \vspace*{\stretch{1}}%
+  \begin{otherlanguage}{#1}%
   \begin{quotation}%
-  #1%
-  \par%
+  \noindent #2\par
   \begin{flushright}
-  \textbf{#2}\\ \textit{#3}
+  \textbf{#3}\\ \textit{#4}
   \end{flushright}%
   \end{quotation}%
+  \end{otherlanguage}
   \thispagestyle{empty}%
   \clearpage%
 }

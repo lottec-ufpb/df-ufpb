@@ -186,10 +186,6 @@ Gera um sumário.
 
 Gera uma bibliografia. O argumento é o nome do arquivo `.bib` contendo os dados bibliográficos das obras citadas. Útil caso a opção `abnt` esteja ativa, quando o pacote `abntex2cite` é então carregado automaticamente. Nos demais casos, o gerenciamento das referências bibliográficas é melhor relegado ao usuário.
 
-### `\indice`
-
-Gera um índice remissivo. Para tanto, o texto deve conter as entradas necessárias ao [makeindex](https://ctan.org/pkg/makeindex).
-
 # Modelo
 
 A escrever.

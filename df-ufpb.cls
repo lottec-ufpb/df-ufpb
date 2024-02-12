@@ -236,8 +236,7 @@
 \linhadepesquisa{Filosofia}              % default
 \def\titulacao#1{\def\ufpb@titulacao{#1}}%
 \def\inclui#1{\long\def\ufpb@inclui{#1}}%
-\inclui{\IfFileExists{\jobname.bbl}{Bibliografia.}\linebreak
-  \IfFileExists{\jobname.ind}{Inclui \'{i}ndice remissivo.}} % default
+\inclui{\IfFileExists{\jobname.bbl}{Inclui bibliografia.}} % default
 \def\codigoBC#1{\def\ufpb@codigoBC{#1}}%
 \def\CDU#1{\def\ufpb@CDU{#1}}%
 \def\classi#1{\def\ufpb@classi{#1}}%
@@ -651,13 +650,6 @@
   \pdfbookmark[0]{\bibname}{bib}
   \fi
   \bibliography{#1}
-}%
-
-\newcommand{\indice}{%
-  \ifpdf
-  \pdfbookmark[0]{\indexname}{idx}
-  \fi
-  \printindex
 }%
 
 \endinput

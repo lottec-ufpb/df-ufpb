@@ -610,18 +610,14 @@
 }
 
 \newcommand{\listadefiguras}{%
-  \ifpdf%
-  \pdfbookmark[1]{\listfigurename}{figuras}
-  \fi
+  \addcontentsline{toc}{section}{\listfigurename}
   \listoffigures%
   \thispagestyle{empty}%
   \clearpage%
 }%
 
 \newcommand{\listadetabelas}{%
-  \ifpdf%
-  \pdfbookmark[1]{\listtablename}{tabelas}
-  \fi
+  \addcontentsline{toc}{section}{\listtablename}
   \listoftables%
   \thispagestyle{empty}%
   \clearpage%

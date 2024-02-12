@@ -170,9 +170,6 @@
   {\end{list}\end{spacing}}
 
 \ifthenelse{\boolean{abnt}}{%
-  \RequirePackage[alf]{abntex2cite}%
-  \newcommand{\textcite}[2][]{\citeonline[#1]{#2}}%
-  \newcommand{\autocite}[2][]{\cite[#1]{#2}}%
   \renewenvironment{quote}%
                    {\begin{citacao}}%
                    {\end{citacao}}%
@@ -637,15 +634,6 @@
   \tableofcontents%
   \thispagestyle{empty}%
   \clearpage%
-}%
-
-\newcommand{\bibliografia}[1]{%
-%  \clearpage
-%  \addcontentsline{toc}{chapter}{Bibliography}
-  \ifpdf%
-  \pdfbookmark[0]{\bibname}{bib}
-  \fi
-  \bibliography{#1}
 }%
 
 \endinput

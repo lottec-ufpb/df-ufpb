@@ -419,7 +419,7 @@
  \thispagestyle{empty}%
  \null\vfill%
  \begin{otherlanguage}{brazil}
-   \begin{minipage}[b]{\textwidth}
+   \noindent\begin{minipage}[b]{\textwidth}
      \begin{center}
        \textbf{Dados Internacionais de Cataloga\c{c}\~{a}o na %
          Publica\c{c}\~{a}o (CIP)}\par%

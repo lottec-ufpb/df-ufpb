@@ -376,6 +376,7 @@
    \end{onehalfspace}
    \vspace{\stretch{0.7}}
    \begin{flushright}
+     \begin{singlespace}
      \begin{minipage}{9.5cm}
        \ufpb@documento{} apresentada \ufpb@programa{} da
        \ufpb@universidade{}, como requisito parcial para
@@ -399,6 +400,7 @@
          }{}%
        \end{tabular}
      \end{minipage}
+     \end{singlespace}
    \end{flushright}
    \vfill
    \begin{center}
@@ -419,6 +421,7 @@
  \thispagestyle{empty}%
  \null\vfill%
  \begin{otherlanguage}{brazil}
+   \begin{singlespace}
    \noindent\begin{minipage}[b]{\textwidth}
      \begin{center}
        \textbf{Dados Internacionais de Cataloga\c{c}\~{a}o na %
@@ -451,6 +454,7 @@
      \end{tabular}
      \end{center}
    \end{minipage}
+   \end{singlespace}
  \end{otherlanguage}
  \thispagestyle{empty}
  \clearpage%

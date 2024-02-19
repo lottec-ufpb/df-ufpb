@@ -508,8 +508,8 @@
   \pdfbookmark[1]{Dedicat\'{o}ria}{pretexto.dedicatoria}
  \fi
  \vspace*{\stretch{0.5}}
- \begin{center}
-}{\vspace*{\fill}\end{center}\thispagestyle{empty}\clearpage}
+ \begin{flushright}
+}{\vspace*{\fill}\end{flushright}\thispagestyle{empty}\clearpage}
 
 %%% Agradecimentos
 

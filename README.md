@@ -11,7 +11,7 @@ Um [modelo LaTeX](https://github.com/lottec-ufpb/df-ufpb/blob/main/modelo.tex) i
 
 # Instruções
 
-Coloque a classe `df-ufpb.cls` seja no próprio diretório onde se encontra o arquivo `.tex`, seja no diretório das fontes LaTeX.
+Coloque a classe `df-ufpb.cls` no próprio diretório onde se encontra o arquivo `.tex`.
 
 A classe foi testada numa instalação completa e atualizada do [TeX Live](https://www.tug.org/texlive/).
 Diversos pacotes comuns (e alguns incomuns) são requeridos pela classe, tais como `hyperref`, `babel`, `identfirst` e `graphicx`, dentre outros. Ademais, para fazer uso das funcionalidades envolvendo idiomas estrangeiros, a sua instalação do TeX deve fornecer suporte completo ao respectivo idioma.

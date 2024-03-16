@@ -1,13 +1,13 @@
 # Uma classe LaTeX para trabalhos acadêmicos
 
 [![Build
-Status](https://github.com/lottec-ufpb/df-ufpb/actions/workflows/main.yml/badge.svg)](https://github.com/lottec-ufpb/df-ufpb/actions/workflows/main.yml)
+Status](../../actions/workflows/main.yml/badge.svg)](../../actions/workflows/main.yml)
 
 A classe `df-ufpb.cls` foi escrita para auxiliar estudantes na elaboração de monografias, dissertações ou teses.
 
 O foco da classe é a geração de elementos textuais comuns em trabalhos acadêmicos (capa, folha de rosto e etc.) e algumas amenidades e ajustes na produção do PDF (metadados e marcadores). Para além disto, no entanto, não é imposta qualquer diagramação ou estilo. Estes aspectos visuais são melhor relegados ao gosto da freguesia. 
 
-Um [modelo LaTeX](https://github.com/lottec-ufpb/df-ufpb/blob/main/modelo.tex) ilustrativo e o [PDF resultante](https://github.com/lottec-ufpb/df-ufpb/releases/latest/download/modelo.pdf) estão disponíveis.
+Um [modelo LaTeX](../../blob/main/modelo.tex) ilustrativo e o [PDF resultante](../../releases/latest/download/modelo.pdf) estão disponíveis.
 
 # Instruções
 
@@ -35,7 +35,7 @@ A opção `abnt` redefine o ambiente `quote` de modo a formatar citações desta
 
 ## Metadados
 
-Estes comandos devem ser usados no preâmbulo da fonte LaTeX (antes de `\begin{document}`) para informar alguns metadados para a classe.
+Estes comandos devem ser usados no preâmbulo (antes de `\begin{document}`) para informar alguns metadados para a classe.
 
 ### `\titulo{}` (obrigatório)
 

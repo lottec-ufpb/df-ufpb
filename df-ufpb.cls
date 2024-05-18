@@ -629,7 +629,7 @@
 
 \newcommand{\sumario}{%
   \ifpdf%
-  \pdfbookmark[1]{\contentsname}{sumario}
+  \pdfbookmark[0]{\contentsname}{sumario}
   \fi
   \tableofcontents%
   \thispagestyle{empty}%

@@ -135,7 +135,7 @@
       \def\keysname{Keywords}%
       \def\thesisname{PhD Thesis}%
       \def\dissertationname{Master's Dissertation}%
-      \def\monographname{Bachelor's Monograph}%
+      \def\monographname{Undergraduate Thesis}%
       \def\acknowledgementsname{Acknowledgements}%
     }%
   }%

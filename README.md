@@ -151,23 +151,23 @@ Gera um termo de autorização de publicação.
 
 Gera uma folha de rosto.
 
-### `\begin{aprovacao}` [...] `end{aprovacao}`
+### `\begin{aprovacao}` [...] `\end{aprovacao}`
 
 Ambiente para geração da folha de aprovação da banca. O(a) presidente da banca já fica preenchido, assumindo os dados do(a) orientador(a). Para os demais membros, usar o comando `\membro{}{}{}` dentro do ambiente. O primeiro argumento é o nome (com titulação), o segundo é a filiação, o terceiro é função na banca (avaliador(a), arguidor(a), coorientador(a), etc.).
 
-### `\begin{dedicatoria}` [...] `end{dedicatoria}`
+### `\begin{dedicatoria}` [...] `\end{dedicatoria}`
 
 Ambiente para gerar uma folha com dedicatória.
 
-### `\begin{agradecimentos}` [...] `end{agradecimentos}`
+### `\begin{agradecimentos}` [...] `\end{agradecimentos}`
 
 Ambiente para gerar uma folha com agradecimentos.
 
-### `\begin{resumo}` [...] `end{resumo}`
+### `\begin{resumo}` [...] `\end{resumo}`
 
 Ambiente para gerar uma folha com o resumo em língua portuguesa.
 
-### `\begin{abstract}{}[]` [...] `end{abstract}`
+### `\begin{abstract}{}[]` [...] `\end{abstract}`
 
 Ambiente para gerar uma folha com o resumo em língua estrangeira.
 

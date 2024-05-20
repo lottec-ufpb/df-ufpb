@@ -155,6 +155,7 @@
 \pagenumbering{arabic}%
 \RequirePackage{babel}%
 \RequirePackage{graphicx}%  
+\RequirePackage{pdfpages}%
 
 %% ABNT quotation environment
 \newenvironment{citacao}%
@@ -484,6 +485,17 @@
    \end{center}%
  \end{otherlanguage}
  \thispagestyle{empty}%
+ \clearpage%
+}%
+
+%%% Ata
+
+\newcommand{\ata}[1]{%
+ \ifpdf
+  \pdfbookmark[1]{Ata da Defesa}{pretexto.ata}
+ \fi
+ \thispagestyle{empty}%
+ \includepdf{#1}
  \clearpage%
 }%
 

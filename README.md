@@ -155,6 +155,13 @@ Gera uma folha de rosto.
 
 Ambiente para geração da folha de aprovação da banca. O(a) presidente da banca já fica preenchido, assumindo os dados do(a) orientador(a). Para os demais membros, usar o comando `\membro{}{}{}` dentro do ambiente. O primeiro argumento é o nome (com titulação), o segundo é a filiação, o terceiro é função na banca (avaliador(a), arguidor(a), coorientador(a), etc.).
 
+
+### `\ata{}`
+
+Insere um documento PDF externo contendo a ata da defesa. O comando toma como argumento o nome do arquivo PDF, o qual deve ser depositado na mesma pasta desta classe LaTeX, junto ao arquivo `.tex`.
+
+Quando usado, este comando normalmente dispensa a folha de aprovação gerada pelo ambiente anterior.
+
 ### `\begin{dedicatoria}` [...] `\end{dedicatoria}`
 
 Ambiente para gerar uma folha com dedicatória.

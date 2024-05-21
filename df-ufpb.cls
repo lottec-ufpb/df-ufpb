@@ -155,6 +155,7 @@
 \pagenumbering{arabic}%
 \RequirePackage{babel}%
 \RequirePackage{graphicx}%  
+\RequirePackage{pdfpages}%
 
 %% ABNT quotation environment
 \newenvironment{citacao}%
@@ -296,7 +297,7 @@
    \begin{onehalfspace}
      \begin{center}
        \large\textbf{\MakeUppercase{Autoriza\c{c}\~{a}o para %
-           Publica\c{c}\~{a}o de\ \ufpb@documento{} Em Formato %
+           Publica\c{c}\~{a}o de\ \ufpb@documento{} em Formato %
            Eletr\^{o}nico}}
      \end{center}
    \end{onehalfspace}
@@ -305,8 +306,8 @@
    a \ufpb@universidade{} -- \ufpb@uni{} a
    reproduzir, inclusive em outro formato ou m\'{i}dia e atrav\'{e}s
    de armazenamento permanente ou tempor\'{a}rio, bem como a
-   publicar na rede mundial de computadores (\textit{Internet}) e na
-   biblioteca virtual da \ufpb@uni, entendendo-se os termos
+   publicar na rede mundial de computadores (\textit{Internet}) e no
+   Repositório Institucional da \ufpb@uni, entendendo-se os termos
    ``reproduzir'' e ``publicar'' conforme defini\c{c}\~{o}es dos
    incisos VI e I, respectivamente, do artigo 5\textordmasculine{}
    da Lei n\textordmasculine{} 9610/98 de 10/02/1998, a obra abaixo
@@ -336,20 +337,6 @@
      \ifthenelse{\isundefined{\ufpb@autora}}{%
        \ufpb@autor{} -- Autor\par}{%
        \ufpb@autora{} -- Autora\par}%
-     \vspace{20pt}
-     \rule{0.7\textwidth}{0.4pt}\linebreak%
-     \small%
-     \ifthenelse{\isundefined{\ufpb@orientadora}}{%
-         \ufpb@orientador{} -- Orientador\par}{%
-         \ufpb@orientadora{} -- Orientadora\par}%
-     \ifthenelse{\isundefined{\ufpb@coorientador}}{}{%
-       \vspace{20pt}%
-       \rule{0.7\textwidth}{0.4pt}\linebreak%
-       \small\ufpb@coorientador{} -- Co-Orientador}
-     \ifthenelse{\isundefined{\ufpb@coorientadora}}{}{%
-       \vspace{20pt}%
-       \rule{0.7\textwidth}{0.4pt}\linebreak%
-       \small\ufpb@coorientadora{} -- Co-Orientadora}
    \end{flushright}%
  \end{otherlanguage}
  \thispagestyle{empty}%
@@ -498,6 +485,17 @@
    \end{center}%
  \end{otherlanguage}
  \thispagestyle{empty}%
+ \clearpage%
+}%
+
+%%% Ata
+
+\newcommand{\ata}[1]{%
+ \ifpdf
+  \pdfbookmark[1]{Ata da Defesa}{pretexto.ata}
+ \fi
+ \thispagestyle{empty}%
+ \includepdf{#1}
  \clearpage%
 }%
 

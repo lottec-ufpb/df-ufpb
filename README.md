@@ -115,7 +115,7 @@ Informar a titulação associada ao trabalho. Caso não informado, será assumid
 
 ### `\codigoBC{}` (necessário caso seja usado o comando `\ficha`)
 
-Informar o código atribuído ao trabalho na ocasião da catalogação na fonte (CIP), feita pela biblioteca.
+Informar o código atribuído ao trabalho na ocasião da catalogação na fonte (CIP), feita pela biblioteca. É comum que se utilize a [Tabela de Cutter](https://pt.wikipedia.org/wiki/Tabela_de_Cutter), ou alguma adaptação / variação da mesma.
 
 ### `\CDU{}` (necessário caso seja usado o comando `\ficha`)
 

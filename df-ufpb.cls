@@ -375,15 +375,15 @@
            \textsf{Linha de Pesquisa:} & \ufpb@linhadepesquisa{}\\[4pt]
          }%
          \ifthenelse{\isundefined{\ufpb@orientadora}}{%
-           \textsf{Orientador:}     & Prof. Dr. \ufpb@orientador{}\\
+           \textsf{Orientador:}        & \ufpb@orientador{}\\
          }{%
-           \textsf{Orientadora:}     & Profa. Dra. \ufpb@orientadora{}\\
+           \textsf{Orientadora:}       & \ufpb@orientadora{}\\
          }%
          \ifthenelse{\NOT\isundefined{\ufpb@coorientadora}}{%
-           \textsf{Coorientadora:}     & Profa. Dra. \ufpb@coorientadora{}
+           \textsf{Coorientadora:}     & \ufpb@coorientadora{}
          }{}%
          \ifthenelse{\NOT\isundefined{\ufpb@coorientador}}{%
-           \textsf{Coorientador:}     & Prof. Dr. \ufpb@coorientador{}
+           \textsf{Coorientador:}      & \ufpb@coorientador{}
          }{}%
        \end{tabular}
      \end{minipage}
@@ -425,11 +425,11 @@
        \ufpb@autorx{}. -- \ufpb@ano{}. & \\
        & \lastpageref{LastPages}f. & \\[0.5cm]
        & \ifthenelse{\isundefined{\ufpb@orientadora}}{%
-         Orientador: Prof. \ufpb@orientador{}}{Orientadora: Profa. \ufpb@orientadora{}}
+         Orientador: \ufpb@orientador{}}{Orientadora: \ufpb@orientadora{}}
        \ifthenelse{\isundefined{\ufpb@coorientador}}{}{%
-         ; Co-Orientador: Prof. \ufpb@coorientador{}}
+         ; Co-Orientador: \ufpb@coorientador{}}
        \ifthenelse{\isundefined{\ufpb@coorientadora}}{}{%
-         ; Co-Orientadora: Profa. \ufpb@coorientadora{}} & \\
+         ; Co-Orientadora: \ufpb@coorientadora{}} & \\
        & \ufpb@documento{} (\ufpb@curso{}) -- \ufpb@universidade{}, %
        \ufpb@unidade{}, \ufpb@ano{}. & \\[0.5cm]
        & \ufpb@inclui{} & \\[1cm]
@@ -478,8 +478,8 @@
    \begin{center}
      \rule{0.8\textwidth}{0.4pt}\linebreak
      \ifthenelse{\isundefined{\ufpb@orientadora}}{%
-       \textbf{Prof. Dr. \ufpb@orientador}\linebreak}{%
-       \textbf{Profa. Dra. \ufpb@orientadora}\linebreak}%
+       \textbf{\ufpb@orientador}\linebreak}{%
+       \textbf{\ufpb@orientadora}\linebreak}%
      Presidente da Banca \vskip 30pt
 }{%
    \end{center}%

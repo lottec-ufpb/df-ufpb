@@ -55,11 +55,11 @@ Informar o nome do(a) autor(a) no formato "Sobrenome, Nome".
 
 ### `\orientador{}` ou `\orientadora{}` (obrigatório ao menos um)
 
-Informar o(a) orientador(a) do trabalho.
+Informar o(a) orientador(a) do trabalho. Honoríficos tais como "Professora Doutora" ou "Prof. Dr." podem acompanhar o nome, caso desejado.
 
 ### `\coorientador{}` ou `\coorientadora{}` (opcional)
 
-Informar o(a) coorientador(a) do trabalho, caso houver.
+Informar o(a) coorientador(a) do trabalho, caso houver. Honoríficos tais como "Professora Doutora" ou "Prof. Dr." podem acompanhar o nome, caso desejado.
 
 ### `\chaves{}` (obrigatório)
 
@@ -153,7 +153,7 @@ Gera uma folha de rosto.
 
 ### `\begin{aprovacao}` [...] `\end{aprovacao}`
 
-Ambiente para geração da folha de aprovação da banca. O(a) presidente da banca já fica preenchido, assumindo os dados do(a) orientador(a). Para os demais membros, usar o comando `\membro{}{}{}` dentro do ambiente. O primeiro argumento é o nome (com titulação), o segundo é a filiação, o terceiro é função na banca (avaliador(a), arguidor(a), coorientador(a), etc.).
+Ambiente para geração da folha de aprovação da banca. O(a) presidente da banca já fica preenchido, assumindo os dados do(a) orientador(a). Para os demais membros, usar o comando `\membro{}{}{}` dentro do ambiente. O primeiro argumento é o nome (possivelmente acompanhado de titulação, ou honoríficos, caso desejado), o segundo é a filiação, o terceiro é a função na banca (avaliador(a), arguidor(a), coorientador(a), etc.).
 
 
 ### `\ata{}`

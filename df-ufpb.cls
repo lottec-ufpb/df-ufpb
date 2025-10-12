@@ -73,7 +73,6 @@
 \DeclareOption{latin}{%
   \PassOptionsToPackage{\CurrentOption}{report}
   \AtEndOfClass{%
-    \languageattribute{latin}{medieval}%
     \addto\captionslatin{%
       \def\pagesname{chartae}%
       \def\keysname{Materia}%

@@ -200,4 +200,4 @@ Gera um sumário.
 
 # Termos de uso
 
-Esta classe está sob [The LaTeX Project Public License](https://www.latex-project.org/lppl.txt). A imagem com o brasão da UFPB é distribuída para sua conveniência. Seu uso é [regimentado pela UFPB](https://www.ufpb.br/ufpb/contents/documentos/outros-pdfs/orientacoes-sobre-o-uso-do-brasao-oficial-da-ufpb.pdf).
+Esta classe está sob [The LaTeX Project Public License](https://www.latex-project.org/lppl.txt). A imagem com o brasão da UFPB é distribuída para sua conveniência. Seu uso é [regimentado pela UFPB](https://www.ufpb.br/brasao-ufpb/).
